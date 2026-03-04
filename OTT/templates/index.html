@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTT Churn Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+    <div class="container">
+        <h2>OTT Churn Prediction</h2>
+        <form action="/predict" method="POST">
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>No. of Days Subscribed:</label>
+            <input type="number" name="no_of_days_subscribed" required>
+
+            <label>Weekly Minutes Watched:</label>
+            <input type="number" name="weekly_mins_watched" required>
+
+            <label>Minimum Daily Minutes:</label>
+            <input type="number" name="minimum_daily_mins" required>
+
+            <label>Maximum Daily Minutes:</label>
+            <input type="number" name="maximum_daily_mins" required>
+
+            <label>Weekly Max Night Minutes:</label>
+            <input type="number" name="weekly_max_night_mins" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

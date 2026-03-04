@@ -1,0 +1,124 @@
+/* Apply a full-page gradient background with animation */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #63b8b4, #4e9687, #3f8399, #3a759e);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Centered container */
+.container {
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    margin: 60px auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+/* Stylish form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Input fields */
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Submit button */
+button {
+    background: linear-gradient(45deg, #66c5c3, #367e84);
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #8cf9d6, #94e4f5);
+}
+
+/* Result box styling */
+.result {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result.success {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: #0f0;
+}
+
+.result.failure {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: rgb(90, 142, 141);
+}
+
+/* Navigation bar */
+.navbar {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 2px solid white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+}
